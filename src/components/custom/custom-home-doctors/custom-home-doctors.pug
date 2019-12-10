@@ -1,0 +1,12 @@
+section.custom-home-doctors
+  .custom-home-doctors__container
+    .custom-home-doctors__doctor-col
+      .custom-home-doctors__doctor-img(:style="{'background' : 'url(' + props.doctors[0].img + ') no-repeat center / cover'}")
+      .custom-home-doctors__doctor-name {{ props.doctors[0].name }}
+    .custom-home-doctors__info-col
+      BlockTitle.custom-home-doctors__title(:title="props.title")
+      .custom-home-doctors__sub-title {{ props.sub_title }}
+      .custom-home-doctors__button Learn More
+    .custom-home-doctors__doctor-col
+      .custom-home-doctors__doctor-img(:style="{'background' : 'url(' + props.doctors[1].img + ') no-repeat center / cover'}")
+      .custom-home-doctors__doctor-name {{ props.doctors[1].name }}

@@ -1,0 +1,55 @@
+.custom-why-reviews
+  background-color: $lightGray
+
+  &__title
+    color: $white
+    text-align: center
+    padding: 2rem 0
+
+  &__review-container
+    background-color: $white
+    border: 3px solid $darkBlue
+    padding: 1rem 2rem
+    min-height: 300px
+    max-width: 65%
+    margin: auto
+    border-radius: 13px
+
+    @include tablet
+      max-width: 90%
+
+  &__name
+    @extend h3
+    color: $darkGray
+    margin-bottom: 1rem
+
+  &__content
+    color: $darkGray
+    margin-bottom: 1rem
+
+  &__date
+
+  &__dot-row
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 2rem 0
+
+  &__dot
+    height: 36px
+    width: 36px
+    border-radius: 100%
+    border: 2px solid $darkBlue
+    background-color: $white
+    margin: 0 .5rem
+    cursor: pointer
+
+    &:first-of-type
+      margin-left: 0
+
+    &:last-of-type
+      margin-right: 0
+
+    &--active
+      background-color: $darkBlue
+      cursor: default

@@ -1,0 +1,45 @@
+.custom-why-value
+  background-color: $darkBlue
+  padding: 0 3rem 1rem 3rem
+
+  &__title
+    color: $orange
+    text-align: center
+    text-transform: uppercase
+    padding: 2rem 0
+
+  &__container
+    @extend .flex-row
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+
+  &__block
+    @extend .flex-column
+    justify-content: flex-start
+    align-items: center
+    flex: 1 0 calc(33% - 2rem)
+    margin: 1rem
+    min-height: 330px
+    max-width: calc(33% - 2rem)
+
+    @include tablet-lg
+      flex-basis: calc(50% - 2rem)
+      max-width: calc(50% - 2rem)
+
+    @include phone-lg
+      flex-basis: calc(100% - 2rem)
+      max-width: none
+
+  &__block-icon
+    width: 75px
+
+  &__block-title
+    @extend h3
+    color: $white
+    text-align: center
+    margin-bottom: 1rem
+
+  &__block-description
+    color: $white
+    text-align: center

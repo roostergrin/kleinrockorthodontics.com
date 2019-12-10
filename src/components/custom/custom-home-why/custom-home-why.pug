@@ -1,0 +1,6 @@
+section.custom-home-why
+  .custom-home-why__row
+    .custom-home-why__col
+      BlockTitle.custom-home-why__title(:title="props.title")
+      .custom-home-why__sub-title {{ props.sub_title }}
+    .custom-home-why__col(:style="{ 'background' : 'url(' + props.img + ') no-repeat center / cover'}")

@@ -1,0 +1,8 @@
+.custom-why-results
+  .custom-why-results__container
+    .custom-why-results__col
+      BlockTitle.custom-why-results__title(:title="props.title")
+      .custom-why-results__results-container
+        .custom-why-results__result(v-for="(person, i) in props.people")
+          .custom-why-results__img(:style="{'background': 'url(' + person.img + ') no-repeat center / cover'}")
+          .custom-why-results__name(v-html="person.name")

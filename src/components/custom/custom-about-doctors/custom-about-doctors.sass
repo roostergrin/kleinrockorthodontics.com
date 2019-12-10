@@ -1,0 +1,79 @@
+.custom-about-doctors
+  position: relative
+
+  &__doctor
+    background-color: $lightGray
+    padding-bottom: 2.5rem
+    padding-top: 2.5rem
+
+    &:first-of-type
+      padding-top: 0
+      padding-bottom: 8.5rem
+
+    &:nth-of-type(2n)
+      background-color: $white
+
+  &__doctor-container
+    @extend .container
+
+  &__doctor-col
+    @extend .col-12
+
+  &__announcement-bar
+    position: relative
+    padding: 2rem
+
+    &--blue
+      background-color: $darkBlue
+      transform: translate(0, -50%)
+
+    &--orange
+      background-color: $orange
+
+    &--gray
+      background-color: $lightGray
+
+  &__doctor-title
+    color: $white
+
+    &--blue
+      color: $darkBlue
+
+  &__doctor-rows
+    color: $white
+
+    &--black
+      color: black
+
+  &__announcement-title
+    text-align: center
+
+    &--orange
+      color: $orange
+
+    &--blue
+      color: $darkBlue
+
+  &__announcement-body
+    @extend h4
+    color: $white
+    padding: 2rem
+    padding: 1rem 2rem 2rem 2rem
+
+    &--extended
+      padding: 1rem 2rem 4rem 2rem
+
+  &__logos-row
+    position: absolute
+    width: 100%
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    left: 0
+    transform: translate(0, -25%)
+
+  &__jets
+    width: 255px
+
+  &__mets
+    width: 150px

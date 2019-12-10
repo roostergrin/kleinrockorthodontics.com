@@ -2,6 +2,10 @@
 
 <script>
 export default {
-
+  computed: {
+    props () {
+      return this.$store.state.app.footer
+    }
+  }
 }
 </script>

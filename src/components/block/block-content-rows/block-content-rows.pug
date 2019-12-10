@@ -1,0 +1,11 @@
+.block-content-rows
+  .block-content-rows__container
+    .block-content-rows__col
+      .block-content-rows__img(:style="{'background': 'url(' + images[0].img + ') no-repeat center / cover'}")
+    .block-content-rows__col
+      .block-content-rows__text(v-html="paragraphs[0].text")
+  .block-content-rows__container
+    .block-content-rows__col
+      .block-content-rows__text(v-html="paragraphs[1].text")
+    .block-content-rows__col
+      .block-content-rows__img(:style="{'background': 'url(' + images[1].img + ') no-repeat center / cover'}")

@@ -1,0 +1,8 @@
+.custom-why-reviews
+  BlockTitle.custom-why-reviews__title(:title="props.title")
+  .custom-why-reviews__review-container
+    .custom-why-reviews__name(v-html="activeReview.name")
+    .custom-why-reviews__content(v-html="activeReview.content")
+    .custom-why-reviews__date(v-html="activeReview.date")
+  .custom-why-reviews__dot-row
+    .custom-why-reviews__dot(v-for="(dot, i) in props.reviews", @click="updateIndex(i)", :class="{'custom-why-reviews__dot--active': i === activeIndex}")

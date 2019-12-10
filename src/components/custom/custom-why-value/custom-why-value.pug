@@ -1,0 +1,7 @@
+.custom-why-value
+  BlockTitle.custom-why-value__title(:title="props.title")
+  .custom-why-value__container
+    .custom-why-value__block(v-for="(value, i) in props.values")
+      BaseIcon.custom-why-value__block-icon(:name="value.icon")
+      .custom-why-value__block-title(v-html="value.section_title")
+      .custom-why-value__block-description(v-html="value.text")

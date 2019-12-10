@@ -1,3 +1,7 @@
 .pages-home(v-if='props')
-  h1 {{ props.title }}
-  h2 BYAH
+  HeroVideo(:props="'#'")
+  HomeWelcome(:props="props.welcome")
+  HomeWhy(:props="props.why")
+  HomeInvisalign(:props="props.invisalign")
+  HomeDoctors(:props="props.doctors")
+  HomeTestimonials(:props="props.testimonials")

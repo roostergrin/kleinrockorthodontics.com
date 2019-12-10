@@ -1,0 +1,47 @@
+.custom-home-welcome
+  position: relative
+  background-color: $lightGray
+  height: 25rem
+
+  &__logo
+    position: absolute
+    width: 333px
+    opacity: .35
+    top: 50%
+    left: 30px
+    transform: translate(0, -50%)
+
+  &__greeting
+    position: absolute
+    left: 260px
+    top: 3rem
+
+    @include tablet
+      left: 50%
+      transform: translate(-50%)
+
+    span
+      @extend h1
+      color: $white
+
+      &:first-of-type
+        margin-left: 1rem
+
+      &:nth-of-type(2)
+        color: $orange
+
+      &:nth-of-type(3)
+        color: $orange
+        font-weight: bold
+
+      &:last-of-type
+        margin-left: 1rem
+
+  &__sub-title
+    position: absolute
+    color: $white
+    font-size: 18px
+    left: 50%
+    top: 50%
+    transform: translate(-50%)
+    max-width: 725px

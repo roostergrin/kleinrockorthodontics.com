@@ -1,0 +1,28 @@
+.custom-home-why
+  height: 30rem
+
+  &__row
+    display: flex
+    height: 100%
+    width: 100%
+
+    @include tablet
+      flex-direction: column-reverse
+
+  &__col
+    width: 50%
+    height: 100%
+
+    @include tablet
+      width: 100%
+
+    &:first-of-type
+      @extend .flex-column-center
+      background-color: $white
+      padding: 3rem
+
+  &__title
+    color: $darkBlue
+
+  &__sub-title
+    line-height: 1.5

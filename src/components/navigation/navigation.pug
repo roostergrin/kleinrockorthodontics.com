@@ -1,2 +1,2 @@
-nav.navigation
-  NavigationDesktop.navigation--desktop(:links='links', :scrolling='scrolling')
+nav.navigation(v-if="props")
+  NavigationDesktop.navigation--desktop(:links='links', :props="props")

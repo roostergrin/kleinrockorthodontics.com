@@ -1,0 +1,11 @@
+.custom-about-offices
+  .custom-about-offices__row
+    .custom-about-offices__col
+      BlockTitle.custom-about-offices__title(:title="props.title")
+      .custom-about-offices__button-col
+        .custom-about-offices__button(v-for="(location, i) in props.offices",
+                                      :class="{'custom-about-offices__button--orange': i % 2 === 1, 'custom-about-offices__button--active' : officeIndex === i }",
+                                      @click="updateOfficeIndex(i)") {{ location.title }}
+    .custom-about-offices__col(:style="{'background': 'url(' + activeImage.src + ') no-repeat center / cover'}")
+      .custom-about-offices__dots-row
+        .custom-about-offices__dot(v-for="(dot, i) in activeOffice.images", :class="{'custom-about-offices__dot--active': imgIndex === i }", @click="updateImageIndex(i)")

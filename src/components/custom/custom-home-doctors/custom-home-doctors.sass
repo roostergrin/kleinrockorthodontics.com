@@ -1,0 +1,58 @@
+.custom-home-doctors
+  height: 30rem
+  background-color: $darkBlue
+
+  @include tablet
+    height: auto
+
+  &__container
+    @extend .container
+    height: 100%
+    display: flex
+
+  &__doctor-col, &__info-col
+    @extend .col-4
+    @extend .col-12--tablet
+
+  &__doctor-col
+    @extend .flex-column-center
+    padding: 2rem 0
+
+    &:first-of-type
+      @include tablet
+        order: 2
+
+    &:last-of-type
+      @include tablet
+        order: 3
+
+  &__doctor-img
+    height: 350px
+    width: 350px
+    margin-bottom: 1rem
+
+  &__doctor-name
+    color: $white
+
+  &__info-col
+    @extend .flex-column
+    text-align: center
+    padding: 2rem 0
+
+  &__title
+    color: $orange
+    margin-top: 1rem
+
+  &__sub-title
+    color: $white
+    margin-top: 4rem
+
+  &__button
+    @extend .button
+    background-color: $orange
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+    margin-top: 2rem
+    align-self: center
+
+    &:active
+      box-shadow: none

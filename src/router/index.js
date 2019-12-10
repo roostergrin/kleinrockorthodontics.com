@@ -5,6 +5,8 @@ import PageNotFound from 'pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 
 const Home = () => import('@/pages/home/home')
+const About = () => import('@/pages/about/about')
+const WhyUs = () => import('@/pages/why-us/why-us')
 
 Vue.use(VueRouter)
 
@@ -14,6 +16,36 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'Home',
+      navigation: false,
+      component: Home
+    },
+    {
+      path: '/about',
+      name: 'About',
+      navigation: true,
+      component: About
+    },
+    {
+      path: '/why-us',
+      name: 'Why Us',
+      navigation: true,
+      component: WhyUs
+    },
+    {
+      path: '/treatments',
+      name: 'Treatments',
+      navigation: true,
+      component: Home
+    },
+    {
+      path: '/new-patients',
+      name: 'New Patients',
+      navigation: true,
+      component: Home
+    },
+    {
+      path: '/contact-us',
+      name: 'Contact Us',
       navigation: true,
       component: Home
     },

@@ -3,7 +3,10 @@ import {
   GET_PAGES,
   // GET_BLOG,
   // SET_BLOG,
-  SET_SCROLLED
+  SET_SCROLLED,
+  SET_NAV_STATE,
+  VIEW_NAV_DRAWER,
+  SET_ANIMATION_STATE
 } from './mutation-types.js'
 
 const mutations = {
@@ -24,6 +27,16 @@ const mutations = {
   },
   [SET_SCROLLED] (state, data) {
     state.scrolled = data
+  },
+  [SET_NAV_STATE] (state, data) {
+    state.navState = data
+  },
+  [VIEW_NAV_DRAWER] (state, data) {
+    state.navDrawer = data
+  },
+  [SET_ANIMATION_STATE] (state, {id, status}) {
+    // console.log(id, status)
+    state.animationState[id] = status
   }
 }
 

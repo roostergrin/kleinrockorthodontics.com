@@ -1,0 +1,17 @@
+section.custom-home-testimonials
+  .custom-home-testimonials__title-container
+    .custom-home-testimonials__col
+      BlockTitle.custom-home-testimonials__title(:title="props.title")
+  .custom-home-testimonials__container
+    .custom-home-testimonials__col
+      .custom-home-testimonials__img(:style="{'background' : 'url(' + activeTestimonial.img + ') no-repeat center / cover'}")
+    .custom-home-testimonials__col
+      .custom-home-testimonials__speech-bubble
+        .custom-home-testimonials__name {{ activeTestimonial.author }}
+        .custom-home-testimonials__content {{ activeTestimonial.content }}
+      .custom-home-testimonials__circle-row
+        .custom-home-testimonials__circle(v-for="(testimonial, i) in props.testimonials",
+                                        @click="updateIndex(i)",
+                                        :style="{'background' : 'url(' + testimonial.img + ') no-repeat center / cover'}",
+                                        :class="{'custom-home-testimonials__circle--active': currentIndex === i}"
+                                        )

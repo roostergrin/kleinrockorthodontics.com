@@ -1,0 +1,6 @@
+.custom-about-staff
+  .custom-about-staff__container
+    .custom-about-staff__col
+      BlockTitle.custom-about-staff__title(:title="props.title")
+      .custom-about-staff__body(v-html="props.body")
+      .custom-about-staff__staff-img(:style="{'background': 'url(' + props.image + ') no-repeat center / cover'}")

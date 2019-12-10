@@ -12,7 +12,12 @@ const store = new Vuex.Store({
     // sortedBlog: {},
     loading: true,
     pages: {},
-    scrolled: {}
+    scrolled: {},
+    navState: '',
+    navDrawer: false,
+    animationState: {
+      'home-welcome': false
+    }
   },
   mutations: mutations,
   actions: actions
