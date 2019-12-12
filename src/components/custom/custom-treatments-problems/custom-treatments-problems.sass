@@ -1,0 +1,76 @@
+.custom-treatments-problems
+
+  &__title
+    text-align: center
+    color: $darkBlue
+
+  &__wrapper
+    @extend .flex-row
+    height: 25rem
+
+    @include tablet
+      height: auto
+      display: flex
+      flex-direction: column-reverse
+
+  &__col
+    height: 100%
+    width: 50%
+
+    @include tablet
+      width: 100%
+      margin: 0
+
+    &:first-of-type
+      margin-right: 15px
+      background-color: $darkBlue
+      border: 3px solid transparent
+      color: $white
+
+      @include tablet
+        margin: 0
+
+    &:last-of-type
+      @extend .flex-column-center
+      margin-left: 15px
+      border: 3px solid $darkBlue
+
+      @include tablet
+        margin: 0
+        padding: 2rem 0
+
+  &__problem-title
+    @extend h2
+    text-align: center
+    margin: 2rem 0
+
+  &__problem-text
+    @extend .flex-column-center
+    line-height: 1.5
+    height: 30%
+    margin-bottom: 2rem
+    padding: 0 2rem
+
+  &__problem-icon
+    width: 330px
+
+  &__dot-row
+    display: flex
+    justify-content: space-evenly
+    width: 80%
+    margin: 0 auto
+
+    @include tablet
+      margin-bottom: 2rem
+
+  &__dot
+    height: 22px
+    width: 22px
+    background-color: $white
+    border-radius: 100%
+    cursor: pointer
+
+    &--active
+      height: 24px
+      width: 24px
+      background-color: $orange

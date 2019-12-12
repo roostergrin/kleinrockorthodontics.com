@@ -1,0 +1,10 @@
+.custom-treatments-itero
+  .custom-treatments-itero__container
+    .custom-treatments-itero__col
+      BlockTitle.custom-treatments-itero__title(title="Itero Element")
+  .custom-treatments-itero__row-container
+    .custom-treatments-itero__container
+      .custom-treatments-itero__photo(:style="{'background': 'url(' + props.img + ') no-repeat center / cover'}")
+      .custom-treatments-itero__col-half
+        .custom-treatments-itero__content(v-html="props.content")
+    .custom-treatments-itero__photo-half(:style="{'background': 'url(' + props.img + ') no-repeat center / cover'}")

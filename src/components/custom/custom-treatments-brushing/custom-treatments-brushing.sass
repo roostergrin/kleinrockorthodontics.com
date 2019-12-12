@@ -1,0 +1,37 @@
+.custom-treatments-brushing
+  padding-top: 2.5rem
+  padding-bottom: 2rem
+
+  &__container
+    @extend .container
+
+  &__col
+    @extend .col-12
+
+  &__title
+    text-align: center
+    color: $darkBlue
+
+  &__announcement
+    @extend .flex-row
+    background-color: $lightGray
+    color: $white
+    line-height: 1.5
+    padding: 2.5rem 5rem
+
+  &__announcement-text
+    @extend .flex-column-center
+    text-align: center
+
+  &__announcement-icon
+    animation: bounce .75s infinite
+
+    &:first-of-type
+      margin-right: .5rem
+
+    &:last-of-type
+      margin-left: .5rem
+
+    svg
+      width: 15px
+      height: 81px

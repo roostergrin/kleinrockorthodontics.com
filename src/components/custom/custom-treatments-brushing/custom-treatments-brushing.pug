@@ -1,0 +1,9 @@
+.custom-treatments-brushing
+  .custom-treatments-brushing__container
+    .custom-treatments-brushing__col
+      BlockTitle.custom-treatments-brushing__title(:title="props.title" )
+      BlockRows(:props="props")
+      .custom-treatments-brushing__announcement
+        BaseIcon.custom-treatments-brushing__announcement-icon(name="Exclamation")
+        .custom-treatments-brushing__announcement-text(v-html="props.announcement")
+        BaseIcon.custom-treatments-brushing__announcement-icon(name="Exclamation")

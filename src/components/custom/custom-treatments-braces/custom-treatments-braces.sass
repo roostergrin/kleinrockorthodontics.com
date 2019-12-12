@@ -1,0 +1,66 @@
+.custom-treatments-braces
+  padding-bottom: 2rem
+  &__title
+    padding: 2rem 0
+    text-align: center
+    color: $darkBlue
+
+  &__row
+    @extend .flex-row
+
+    @include tablet
+      flex-direction: column
+
+  &__image-col
+    @extend .flex-column-center
+    flex: 1 1 0
+
+    @include tablet
+
+      &:first-of-type
+        order: 1
+        margin-bottom: 2rem
+
+      &:last-of-type
+        display: none
+
+  &__image
+    height: 350px
+    width: 350px
+    border-radius: 100%
+
+  &__center-col
+    @extend .flex-column
+    flex: 1 1 0
+    margin: 0 1rem
+
+    @include tablet
+      order: 1
+
+  &__options-row
+    width: 100%
+    display: flex
+    justify-content: space-around
+    margin-bottom: 3.75rem
+
+    @include tablet
+      justify-content: center
+
+  &__option
+    @extend h2
+    cursor: pointer
+    margin: 0 1rem
+
+    &:first-of-type
+      margin-left: 0
+
+    &:last-of-type
+      margin-right: 0
+
+    &--active
+      font-weight: bold
+      text-decoration: underline
+
+  &__content
+    line-height: 1.5
+    text-align: center

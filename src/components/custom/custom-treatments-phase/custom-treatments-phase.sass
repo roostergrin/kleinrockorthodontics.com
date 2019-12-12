@@ -1,0 +1,48 @@
+.custom-treatments-phase
+  background-color: $lightGray
+  padding-bottom: 2.5rem
+
+  &__container
+    @extend .container
+
+  &__col
+    @extend .col-6
+    display: flex
+    align-items: center
+
+    @include tablet
+      margin-bottom: 1rem
+
+  &__title
+    color: $white
+    padding: 2rem 0
+
+  &__section-container
+    @extend .container
+    @extend .flex-column
+
+  &__section
+    @extend .flex-row-reverse
+
+    @include tablet
+      flex-direction: column
+
+    .custom-treatments-phase__section-container--reverse &
+      @extend .flex-row
+
+      @include tablet
+        flex-direction: column
+
+  &__section-title
+    @extend h2
+    color: $white
+    text-align: center
+    margin-bottom: 1rem
+
+  &__content
+    color: $white
+    line-height: 1.5
+
+  &__img
+    min-height: 310px
+    width: 100%

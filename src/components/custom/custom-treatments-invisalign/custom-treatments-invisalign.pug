@@ -1,0 +1,13 @@
+.custom-treatments-invisalign(v-if="props")
+  .custom-treatments-invisalign__container
+    .custom-treatments-invisalign__col
+      .custom-treatments-invisalign__title
+        span Invis
+        span Align
+      .custom-treatments-invisalign__invisalign-container
+        .custom-treatments-invisalign__invisalign-title-row
+          .custom-treatments-invisalign__invisalign-title(v-for="(type, i) in props.invisalign_types",
+                                                        :class="{'custom-treatments-invisalign__invisalign-title--active' : activeIndex === i}",
+                                                        @click="updateIndex(i)"
+                                                        v-html="type.title")
+        BlockRows(:props="activeSection")

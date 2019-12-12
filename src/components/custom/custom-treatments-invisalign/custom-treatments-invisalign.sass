@@ -1,0 +1,38 @@
+.custom-treatments-invisalign
+  padding: 3.75rem 0
+
+  &__container
+    @extend .container
+
+  &__col
+    @extend .col-12
+
+  &__title
+    @extend h1
+    color: $darkBlue
+    text-transform: uppercase
+    text-align: center
+    padding-bottom: 2rem
+
+    span
+      &:last-of-type
+        font-weight: bold
+
+
+  &__invisalign-container
+
+  &__invisalign-title-row
+    @extend h2
+    @extend .flex-row
+    justify-content: space-evenly
+    margin-bottom: 1rem
+
+
+  &__invisalign-title
+    cursor: pointer
+    text-align: center
+
+    &--active
+      font-weight: bold
+      text-decoration: underline
+      cursor: default
