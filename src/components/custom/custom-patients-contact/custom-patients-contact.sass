@@ -1,0 +1,27 @@
+.custom-patients-contact
+  background-color: $white
+
+  &__container
+    @extend .container
+
+  &__col
+    @extend .col-6
+    @extend .col-12--tablet
+
+    &--alt
+      @include tablet
+        display: none
+
+  &__col-full
+    @extend .col-12
+    padding: 2rem 0
+
+  &__title
+    color: $darkBlue
+    text-transform: uppercase
+    text-align: center
+
+
+  &__img
+    height: 100%
+    width: 100%

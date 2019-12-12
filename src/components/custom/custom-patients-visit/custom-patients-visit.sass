@@ -1,0 +1,45 @@
+.custom-patients-visit
+  color: $white
+  background-color: $lightGray
+  padding-bottom: 2rem
+
+  &__container
+    @extend .container
+
+    &--alt
+      margin-bottom: 1.25rem
+
+  &__col
+    @extend .col-12
+
+  &__title
+    padding: 2rem 0
+    text-transform: uppercase
+
+  &__col-half
+    @extend .col-6
+
+  &__row
+    position: relative
+    height: 28rem
+
+    @include tablet
+      height: auto
+
+  &__img
+    position: absolute
+    height: 100%
+    width: 50%
+    right: 0
+    top: 0
+
+    @include tablet
+      display: none
+
+  &__img-alt
+    display: none
+    @include tablet
+      display: block
+      height: 25rem
+      width: 90%
+      margin: 0 auto 1rem auto

@@ -1,0 +1,4 @@
+.custom-patients-forms
+  BlockTitle.custom-patients-forms__title(:title="props.title")
+  .custom-patients-forms__form-row
+    .custom-patients-forms__form(v-for="(form, i) in props.forms" v-html="form.label")

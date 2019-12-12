@@ -1,0 +1,7 @@
+.custom-patients-finance
+  .custom-patients-finance__container
+    .custom-patients-finance__col
+      BlockTitle.custom-patients-finance__title(:title="props.title")
+      BlockRows.custom-patients-finance__rows(:props="props")
+      .custom-patients-finance__sub-title(v-html="props.sub_title")
+      .custom-patients-finance__disclaimer(v-html="props.disclaimer")

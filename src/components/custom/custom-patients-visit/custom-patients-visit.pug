@@ -1,0 +1,11 @@
+.custom-patients-visit
+  .custom-patients-visit__container.custom-patients-visit__container--alt
+    .custom-patients-visit__col
+      BlockTitle.custom-patients-visit__title(:title="props.title")
+      .custom-patients-visit__first-visit(v-html="content[0].text")
+  .custom-patients-visit__row
+    .custom-patients-visit__img-alt(:style="{'background' : 'url(' + props.img + ') no-repeat center / cover'}")
+    .custom-patients-visit__container
+      .custom-patients-visit__col-half
+        .custom-patients-visit__questions(v-html="content[1].text")
+    .custom-patients-visit__img(:style="{'background' : 'url(' + props.img + ') no-repeat center / cover'}")

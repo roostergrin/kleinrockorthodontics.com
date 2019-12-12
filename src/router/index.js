@@ -7,6 +7,7 @@ const Home = () => import('@/pages/home/home')
 const About = () => import('@/pages/about/about')
 const WhyUs = () => import('@/pages/why-us/why-us')
 const Treatments = () => import('@/pages/treatments/treatments')
+const NewPatients = () => import('@/pages/new-patients/new-patients')
 
 Vue.use(VueRouter)
 
@@ -41,7 +42,7 @@ const router = new VueRouter({
       path: '/new-patients',
       name: 'New Patients',
       navigation: true,
-      component: Home
+      component: NewPatients
     },
     {
       path: '/contact-us',

@@ -1,0 +1,8 @@
+.custom-patients-contact
+  .custom-patients-contact__container
+    .custom-patients-contact__col-full
+      BlockTitle.custom-patients-contact__title(:title="props.title")
+    .custom-patients-contact__col
+      ContactForm
+    .custom-patients-contact__col.custom-patients-contact__col--alt
+      .custom-patients-contact__img(:style="{'background': 'url(' + props.img + ') no-repeat center left / cover'}")
