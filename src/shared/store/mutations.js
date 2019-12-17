@@ -1,8 +1,8 @@
 import {
   GET_APP,
   GET_PAGES,
-  // GET_BLOG,
-  // SET_BLOG,
+  GET_BLOG,
+  SET_BLOG,
   SET_SCROLLED,
   SET_NAV_STATE,
   VIEW_NAV_DRAWER,
@@ -13,14 +13,14 @@ const mutations = {
   [GET_APP] (state, data) {
     state.app = data
   },
-  // [GET_BLOG] (state, data) {
-  //   state.blog = data
-  //   state.blog.current_page = {}
-  //   state.blog.current_page.number = 1
-  // },
-  // [SET_BLOG] (state, data) {
-  //   state.sortedBlog = data
-  // },
+  [GET_BLOG] (state, data) {
+    state.blog = data
+    state.blog.current_page = {}
+    state.blog.current_page.number = 1
+  },
+  [SET_BLOG] (state, data) {
+    state.sortedBlog = data
+  },
   [GET_PAGES] (state, data) {
     state.pages = data
     state.loading = false

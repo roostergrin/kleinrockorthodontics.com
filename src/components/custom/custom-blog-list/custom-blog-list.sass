@@ -1,0 +1,102 @@
+.custom-blog-list
+  padding-top: 120px
+
+  &__title
+    padding: 2rem 0
+    background-color: $darkBlue
+    color: $white
+    text-align: center
+
+  &__row
+    background-color: $lightGray
+
+    .custom-blog-list__blog
+      background-color: $white
+
+      .custom-blog-list__blog-title
+        @extend h3
+        color: $darkBlue
+        font-weight: bold
+
+      .custom-blog-list__date
+        color: $darkBlue
+        font-size: 16px
+
+      .custom-blog-list__img
+
+      .custom-blog-list__text
+        color: $darkGray
+        // max-height: 135px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+      .custom-blog-list__button
+        @extend .button
+        color: $darkBlue
+        border: 2px solid $darkBlue
+
+        &:active
+          color: $white
+          background-color: $darkBlue
+
+    &--white
+      background-color: $white
+
+      .custom-blog-list__blog
+        background-color: $darkBlue
+
+        .custom-blog-list__blog-title
+          @extend h3
+          color: $white
+          font-weight: bold
+
+        .custom-blog-list__date
+          color: $white
+          font-size: 16px
+
+        .custom-blog-list__text
+          color: $white
+
+        .custom-blog-list__button
+          @extend .button
+          color: $orange
+          border: 2px solid $orange
+
+          &:active
+            color: $white
+            background-color: $orange
+
+
+    &--blue
+      background-color: $darkBlue
+
+  &__blog
+    padding: 2rem 2rem 1rem 2rem
+    width: 50%
+    margin: 0 .5rem
+
+    @include tablet
+      width: 100%
+      margin: .5rem 0
+
+  &__img
+    height: 450px
+
+  &__text
+    padding: 1rem 0
+
+  &__container
+    @extend .container
+    padding-top: 1rem
+    padding-bottom: 1rem
+
+  &__col
+    @extend .col-12
+    display: flex
+
+    @include tablet
+      flex-direction: column
+
+  &__text
+    line-height: 1.5

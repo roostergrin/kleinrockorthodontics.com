@@ -1,0 +1,35 @@
+.custom-contact-form
+  padding-bottom: 2rem
+
+  &__container
+    @extend .container
+
+  &__col
+    @extend .col-6
+
+  &__col-full
+    @extend .col-12
+
+  &__title
+    color: $darkBlue
+    text-align: center
+    padding: 2rem 0
+    text-transform: uppercase
+
+  &__center-container
+    @extend .flex-column-center
+    height: 100%
+
+  &__sub-title
+    @extend h3
+    text-align: center
+    margin-bottom: 2rem
+    max-width: 420px
+
+  &__button
+    @extend .button
+    background-color: $darkBlue
+    box-shadow: 2px 5px 10px 0 rgba(0, 0, 0, 0.25)
+
+    &:active
+      box-shadow: none

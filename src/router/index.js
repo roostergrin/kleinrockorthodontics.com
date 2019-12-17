@@ -8,6 +8,10 @@ const About = () => import('@/pages/about/about')
 const WhyUs = () => import('@/pages/why-us/why-us')
 const Treatments = () => import('@/pages/treatments/treatments')
 const NewPatients = () => import('@/pages/new-patients/new-patients')
+const ContactUs = () => import('@/pages/contact-us/contact-us')
+const FunAndEvents = () => import('@/pages/fun-and-events/fun-and-events')
+const Blog = () => import('@/pages/blog/blog')
+const BlogTemplate = () => import('@/pages/blog-template/blog-template')
 
 Vue.use(VueRouter)
 
@@ -48,7 +52,23 @@ const router = new VueRouter({
       path: '/contact-us',
       name: 'Contact Us',
       navigation: true,
-      component: Home
+      component: ContactUs
+    },
+    {
+      path: '/blog',
+      name: 'Blog',
+      navigation: true,
+      component: Blog
+    },
+    {
+      path: '/blog/:blogID',
+      component: BlogTemplate
+    },
+    {
+      path: '/fun-and-events',
+      name: 'Fun and Events',
+      navigation: true,
+      component: FunAndEvents
     },
     {
       path: '/*',

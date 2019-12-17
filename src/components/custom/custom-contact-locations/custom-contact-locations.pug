@@ -1,0 +1,19 @@
+.custom-contact-locations
+  .custom-contact-locations__container
+    .custom-contact-locations__col-full
+      BlockTitle.custom-contact-locations__title(:title="props.title")
+    .custom-contact-locations__col
+      .custom-contact-locations__location-container
+        .custom-contact-locations__location-wrapper
+          .custom-contact-locations__location-title(v-html="locations[0].title")
+          .custom-contact-locations__address(v-html="locations[0].address")
+          .custom-contact-locations__phone(v-html="locations[0].phone")
+          .custom-contact-locations__hours(v-html="locations[0].hours")
+
+    .custom-contact-locations__col
+      .custom-contact-locations__location-container
+        .custom-contact-locations__location-wrapper
+          .custom-contact-locations__location-title(v-html="locations[1].title")
+          .custom-contact-locations__address(v-html="locations[1].address")
+          .custom-contact-locations__phone(v-html="locations[1].phone")
+          .custom-contact-locations__hours(v-html="locations[1].hours")

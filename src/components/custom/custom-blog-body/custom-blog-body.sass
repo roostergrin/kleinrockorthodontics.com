@@ -1,0 +1,47 @@
+.custom-blog-body
+  width: 50%
+  margin: auto
+  display: flex
+  flex-direction: column
+  padding: 125px 0
+
+  @include tablet
+    width: 90%
+
+  &__title
+    @extend h2
+    color: $darkBlue
+    text-transform: capitalize
+    letter-spacing: 2.9px
+    font-size: 32px
+    font-weight: 900
+    margin: 5px 0
+
+  &__date
+    margin-bottom: 5px
+
+  img
+    max-width: 100%
+    align-self: center
+    margin-bottom: 10px
+
+    @include tablet
+      max-width: 100%
+
+  &__body
+    text-indent: 10px
+    margin: 1rem 0
+    h1, h2, h3
+      opacity: 1
+      color: #13c0d7
+      margin-bottom: 16px
+
+  &__back-link
+    cursor: pointer
+    font-weight: 600
+    max-width: 33%
+    margin-top: 20px
+
+    &:hover
+      color: #13c0d7
+      outline: none

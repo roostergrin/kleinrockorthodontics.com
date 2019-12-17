@@ -1,0 +1,47 @@
+.custom-contact-locations
+  background-color: $darkBlue
+  padding-bottom: 2rem
+
+  &__container
+    @extend .container
+
+  &__col-full
+    @extend .col-12
+
+  &__col
+    @extend .col-6
+    @extend .flex-column-center
+
+
+  &__title
+    color: $orange
+    text-align: center
+    padding: 2rem 0
+
+  &__location-container
+    background-color: $lightGray
+    color: $white
+    height: 415px
+    width: 400px
+
+    @include tablet
+      margin-bottom: 1rem
+
+  &__location-wrapper
+    padding: 2.5rem 3.5rem
+
+
+  &__location-title
+    @extend h3
+    font-weight: bold
+    margin-bottom: 1rem
+  &__address
+    @extend h3
+    margin-bottom: 1rem
+
+  &__phone
+    @extend h3
+    margin-bottom: 1rem
+
+  &__hours
+    @extend h3

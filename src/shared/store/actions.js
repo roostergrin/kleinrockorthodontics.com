@@ -2,8 +2,8 @@ import axios from 'axios'
 import api from 'api'
 import {
   GET_APP,
-  // GET_BLOG,
-  // SET_BLOG,
+  GET_BLOG,
+  SET_BLOG,
   GET_PAGES,
   SET_SCROLLED,
   SET_NAV_STATE,
@@ -25,28 +25,28 @@ const actions = {
       } catch (e) { console.log('APP API: ' + e) }
     })()
   },
-  // GET_BLOG ({ commit }) {
-  //   (async () => {
-  //     try {
-  //       var response = await axios.get(`${api}/wp/v2/posts?per_page=100`)
-  //       const total = response.headers['x-wp-totalpages']
-  //       let page = 1
-  //       while (page < total) {
-  //         page++
-  //         let res = await axios.get(`${api}/wp/v2/posts?page=${page}&per_page=100`)
-  //         response.data = response.data.concat(res.data)
-  //       }
-  //       const data = response.data.reduce(
-  //         (allData, data) => ({ ...allData, [data.slug]: data }),
-  //         {}
-  //       )
-  //       commit(GET_BLOG, response.data)
-  //       commit(SET_BLOG, data)
-  //     } catch (e) {
-  //       console.log(e)
-  //     }
-  //   })()
-  // },
+  GET_BLOG ({ commit }) {
+    (async () => {
+      try {
+        var response = await axios.get(`${api}/wp/v2/posts?per_page=100`)
+        const total = response.headers['x-wp-totalpages']
+        let page = 1
+        while (page < total) {
+          page++
+          let res = await axios.get(`${api}/wp/v2/posts?page=${page}&per_page=100`)
+          response.data = response.data.concat(res.data)
+        }
+        const data = response.data.reduce(
+          (allData, data) => ({ ...allData, [data.slug]: data }),
+          {}
+        )
+        commit(GET_BLOG, response.data)
+        commit(SET_BLOG, data)
+      } catch (e) {
+        console.log(e)
+      }
+    })()
+  },
   GET_PAGES ({ commit }) {
     (async () => {
       try {

@@ -1,0 +1,12 @@
+.custom-blog-list
+  BlockTitle.custom-blog-list__title(:title="props.title")
+  .custom-blog-list__row(v-for="(group, i) in blogGroups", :class="{'custom-blog-list__row--white': i % 2 === 1, 'custom-blog-list__row--blue': i % 3 === 0 && i !== 0 }")
+    .custom-blog-list__container
+      .custom-blog-list__col
+        .custom-blog-list__blog(v-for="(blog, i) in group")
+          .custom-blog-list__blog-title(v-html="blog.title")
+          .custom-blog-list__date(v-html="blog.date")
+          .custom-blog-list__img(v-if="blog.img", :style="{'background' : 'url(' + blog.img + ') no-repeat center / cover'}")
+          .custom-blog-list__img(v-else :style="{'background' : 'url(' + blog.img + ') no-repeat center / cover'}")
+          .custom-blog-list__text(v-html="blog.body")
+          .custom-blog-list__button(@click="blogRedirect(blog.slug)") Read More

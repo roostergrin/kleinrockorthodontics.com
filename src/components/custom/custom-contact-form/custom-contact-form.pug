@@ -1,0 +1,11 @@
+.custom-contact-form
+  .custom-contact-form__container
+    .custom-contact-form__col-full
+      BlockTitle.custom-contact-form__title(:title="props.title")
+  .custom-contact-form__container
+    .custom-contact-form__col
+      ContactForm
+    .custom-contact-form__col
+      .custom-contact-form__center-container
+        .custom-contact-form__sub-title(v-html="props.sub_title")
+        .custom-contact-form__button() {{ props.button_label}}

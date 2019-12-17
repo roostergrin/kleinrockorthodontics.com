@@ -8,8 +8,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     app: {},
-    // blog: {},
-    // sortedBlog: {},
+    blog: [],
+    sortedBlog: {},
     loading: true,
     pages: {},
     scrolled: {},

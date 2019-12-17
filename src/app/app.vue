@@ -7,7 +7,7 @@ import TheFooter from 'components/footer/footer'
 export default {
   async created () {
     this.$store.dispatch('GET_APP')
-    // this.$store.dispatch('GET_BLOG')
+    this.$store.dispatch('GET_BLOG')
     this.$store.dispatch('GET_PAGES')
     this.$store.dispatch('SET_SCROLLED', false)
   },
