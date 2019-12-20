@@ -2,6 +2,7 @@
 
 <script>
 import NavigationDesktop from 'components/navigation/nav-desktop/nav-desktop'
+import NavigationMobile from 'components/navigation/nav-mobile/nav-mobile'
 
 export default {
   mounted () {
@@ -46,7 +47,8 @@ export default {
     }
   },
   components: {
-    NavigationDesktop
+    NavigationDesktop,
+    NavigationMobile
   }
 }
 </script>

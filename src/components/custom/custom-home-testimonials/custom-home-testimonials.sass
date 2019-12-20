@@ -74,6 +74,15 @@
     margin: 0 .75rem
     cursor: pointer
 
+    @include tablet
+      height: 65px
+      width: 65px
+
+
+    @include phone
+      width: 50px
+      height: 50px
+
     &--active
       border: 3px solid $darkBlue
 

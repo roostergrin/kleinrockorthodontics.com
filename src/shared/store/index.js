@@ -16,7 +16,8 @@ const store = new Vuex.Store({
     navState: '',
     navDrawer: false,
     animationState: {
-      'home-welcome': false
+      'about-doctors': false,
+      'treatments-phase': false
     }
   },
   mutations: mutations,

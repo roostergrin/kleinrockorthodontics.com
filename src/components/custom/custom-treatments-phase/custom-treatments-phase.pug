@@ -3,7 +3,7 @@
     .custom-treatments-phase__col
       BlockTitle.custom-treatments-phase__title(:title="props.title")
   .custom-treatments-phase__section-container(v-for="(section, i) in props.sections", :class="{'custom-treatments-phase__section-container--reverse': i % 2 === 1}")
-    .custom-treatments-phase__section-title(v-html="section.section_heading")
+    .custom-treatments-phase__section-title(v-html="section.section_heading", :class="{'custom-treatments-phase__section-title--active' : animationState }")
     .custom-treatments-phase__section
       .custom-treatments-phase__col
         .custom-treatments-phase__img(:style="{'background': 'url(' + section.img + ') no-repeat center / cover'}")

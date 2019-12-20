@@ -16,6 +16,10 @@ export default {
     },
     doctors () {
       return this.props.doctors
+    },
+    animationState () {
+      // console.log(this.$store.state.animationState['about-doctors'])
+      return this.$store.state.animationState['about-doctors']
     }
   },
   components: {

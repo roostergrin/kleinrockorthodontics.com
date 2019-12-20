@@ -10,6 +10,9 @@
       padding-top: 0
       padding-bottom: 8.5rem
 
+      .custom-about-doctors__doctor-title
+        padding-top: 1rem
+
     &:nth-of-type(2n)
       background-color: $white
 
@@ -26,6 +29,9 @@
     &--blue
       background-color: $darkBlue
       transform: translate(0, -50%)
+
+      @include tablet
+        transform: translate(0,0)
 
     &--orange
       background-color: $orange
@@ -47,6 +53,9 @@
 
   &__announcement-title
     text-align: center
+    transform: translate(0, 30px)
+    opacity: 0
+    transition: opacity 1s ease, transform 1s ease
 
     &--orange
       color: $orange
@@ -54,14 +63,31 @@
     &--blue
       color: $darkBlue
 
+    &--active
+      opacity: 1
+      transform: translate(0, 0)
+
+
   &__announcement-body
     @extend h4
     color: $white
     padding: 2rem
     padding: 1rem 2rem 2rem 2rem
+    transform: translate(0, 30px)
+    opacity: 0
+    transition: opacity 1s ease, transform 1s ease
 
     &--extended
       padding: 1rem 2rem 4rem 2rem
+
+    &--active
+      transform: translate(0, 0)
+      opacity: 1
+
+    @include tablet
+      padding-left: 0
+      padding-right: 0
+
 
   &__logos-row
     position: absolute

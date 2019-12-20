@@ -1,6 +1,6 @@
 .custom-blog-body(v-if="props")
+  a.custom-blog-body__back-link(@click="redirectToBlogs") < Back to Blogs
   .custom-blog-body__title {{ title }}
   .custom-blog-body__date {{ date }}
   img.custom-blog-body__img(:src="img")
   .custom-blog-body__body(v-html="body")
-  a.custom-blog-body__back-link(@click="redirectToBlogs") Back to Blogs

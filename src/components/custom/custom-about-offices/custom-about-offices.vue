@@ -29,6 +29,12 @@ export default {
       this.imgIndex = index
     }
   },
+  watch: {
+    // reset imageIndex on office index change
+    officeIndex (index) {
+      this.imgIndex = 0
+    }
+  },
   components: {
     BlockTitle
   }

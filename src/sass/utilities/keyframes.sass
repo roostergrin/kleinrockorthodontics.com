@@ -18,15 +18,44 @@
 
 @keyframes fade-bounce-in
   0%
-    transform: translateY(12%) scale(.75)
     opacity: 0
+    transform: translate3d(0, -300px, 0)
+
+  60%
+    opacity: 1
+    transform: translate3d(0, 10px, 0)
+
   75%
-    transform: scale(1.05)
-  85%
-    opacity: 1
-  100%
-    transform: translateY(0) scale(1)
-    opacity: 1
+    transform: translate3d(0, -5px, 0)
+
+  90%
+    transform: translate3d(0, 5px, 0)
+
+  to
+    transform: translate3d(0, 0, 0)
+
+//   0% {
+//     opacity: 0;
+//     transform: translate3d(0, -3000px, 0);
+//   }
+
+//   60% {
+//     opacity: 1;
+//     transform: translate3d(0, 25px, 0);
+//   }
+
+//   75% {
+//     transform: translate3d(0, -10px, 0);
+//   }
+
+//   90% {
+//     transform: translate3d(0, 5px, 0);
+//   }
+
+//   to {
+//     transform: translate3d(0, 0, 0);
+//   }
+// }
 
 @keyframes bounce
   0%

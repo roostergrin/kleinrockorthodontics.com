@@ -1,7 +1,9 @@
 <template lang="pug" src="./nav-desktop.pug"></template>
 
 <script>
+import { scrollToElement, redirectAndScroll } from '@/shared/functionality/mixins'
 export default {
+  mixins: [scrollToElement, redirectAndScroll],
   props: {
     props: {
       type: Object
@@ -27,6 +29,16 @@ export default {
   methods: {
     redirectHome () {
       this.$router.push('/')
+    },
+    redirectToContactForm () {
+      const { path } = this.$route
+
+      if (path === '/contact-us') {
+        this.$store.dispatch('VIEW_NAV_DRAWER', false)
+        this.scrollToElement('#contact-form')
+      } else {
+        this.redirectAndScroll('contact-us', '#contact-form')
+      }
     }
   }
 }

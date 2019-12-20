@@ -13,8 +13,11 @@
     &:nth-of-type(2)
 
       .block-content-rows__text
-        padding-right: 2rem !important
+        padding-right: 2rem
         padding-left: 0
+
+        @include tablet
+          padding-right: 0
 
   &__col
     flex: 1 1 0

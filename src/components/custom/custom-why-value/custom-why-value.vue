@@ -9,8 +9,6 @@ export default {
       type: Object
     }
   },
-  computed: {
-  },
   components: {
     BlockTitle
   }

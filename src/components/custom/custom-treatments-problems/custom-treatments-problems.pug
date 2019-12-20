@@ -5,6 +5,6 @@
       .custom-treatments-problems__problem-title(v-html="activeProblem.title")
       .custom-treatments-problems__problem-text(v-html="activeProblem.text")
       .custom-treatments-problems__dot-row
-        .custom-treatments-problems__dot(v-for="(dot, i) in props.problems", @click="updateIndex(i)", :class="{'custom-treatments-problems__dot--active': i === activeIndex }")
+        .custom-treatments-problems__dot(v-for="(dot, i) in props.problems", @click="jumpToIndex(i)", :class="{'custom-treatments-problems__dot--active': i === activeIndex }")
     .custom-treatments-problems__col
       BaseIcon.custom-treatments-problems__problem-icon(:name="activeProblem.graphic_name")

@@ -1,0 +1,12 @@
+.nav-mobile(v-if="props", :class="{'nav-mobile--open' : drawerState}")
+  .nav-mobile__top-container
+    .nav-mobile__icon(@click="redirectHome", :style="{'background': 'url(' + props.nav_info.mobile_logo + ') no-repeat center / contain'}")
+    MenuButton.nav-mobile__menu-icon(@click.native="toggleDrawer")
+  .nav-mobile__menu
+    .nav-mobile__menu-wrapper
+      .nav-mobile__links-container
+        span(v-for='(link, i) in links', :key="i")
+          router-link.nav-mobile__link(:to="link") {{ link.name }}
+      .nav-mobile__info-container
+        .nav-mobile__button.nav-mobile__button--complimentary(@click="redirectToContactForm") complimentary consultation
+

@@ -39,6 +39,7 @@
       @include tablet
         margin: 0
         padding: 2rem 0
+        border: 0
 
   &__problem-title
     @extend h2
@@ -55,6 +56,9 @@
   &__problem-icon
     width: 330px
 
+    @include tablet
+      width: 300px
+
   &__dot-row
     display: flex
     justify-content: center
@@ -63,10 +67,11 @@
 
     @include tablet
       margin-bottom: 2rem
+      width: 90%
 
   &__dot
-    height: 22px
-    width: 22px
+    height: 20px
+    width: 20px
     background-color: $white
     border-radius: 100%
     cursor: pointer
@@ -79,6 +84,6 @@
       margin-right: 0
 
     &--active
-      height: 24px
-      width: 24px
+      height: 23px
+      width: 23px
       background-color: $orange

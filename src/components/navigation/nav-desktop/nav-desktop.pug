@@ -1,15 +1,15 @@
 .nav-desktop(v-if="props", :class="{ 'nav-desktop--hide' : navState === 'hide', 'nav-desktop--top' : navState === 'top' }")
   .nav-desktop__top
-    .nav-desktop__logo(:style="{'background' : 'url(' + logo + ') no-repeat center / contain'}" @click.native="redirectHome")
+    .nav-desktop__logo(:style="{'background' : 'url(' + logo + ') no-repeat center / contain'}", @click="redirectHome")
     .nav-desktop__active-link {{ activeRoute }}
   .nav-desktop__bottom
-  //- BaseIcon.nav-desktop__logo-small(name="Header-Logo-Minimal" @click.native="redirectHome")
+  BaseIcon.nav-desktop__logo-small(name="LogoOnly-Orange" @click.native="redirectHome")
   .nav-desktop__container
     .nav-desktop__row
       a.nav-desktop__phone-container(href="tel:208-678-3265")
         BaseIcon.nav-desktop__phone(name="phone")
         .nav-desktop__phone-number {{ phone }}
-      .nav-desktop__button Free Consultation
+      .nav-desktop__button(@click="redirectToContactForm") Free Consultation
     .nav-desktop__row
       router-link.nav-desktop__link(v-for="(link, i) in links", :key="i", :to="link.path")
         p {{ link.name }}

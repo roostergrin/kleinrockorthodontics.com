@@ -18,7 +18,6 @@
       &:last-of-type
         font-weight: bold
 
-
   &__invisalign-container
 
   &__invisalign-title-row
@@ -27,10 +26,15 @@
     justify-content: space-evenly
     margin-bottom: 1rem
 
+    @include tablet
+      flex-direction: column
 
   &__invisalign-title
     cursor: pointer
     text-align: center
+
+    @include tablet
+      padding-bottom: .5rem
 
     &--active
       font-weight: bold

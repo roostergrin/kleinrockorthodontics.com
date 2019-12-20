@@ -1,5 +1,5 @@
 .pages-about(v-if="props")
   HeroPhoto(:props="props.hero")
-  AboutDoctors(:props="props.doctors")
+  AboutDoctors#about-doctors(:props="props.doctors" v-waypoint="{ active: true, callback: activateAnimation, options: thresholdOptions }")
   AboutStaff(:props="props.staff")
   AboutOffices(:props="props.offices")

@@ -11,21 +11,33 @@
     left: 30px
     transform: translate(0, -50%)
 
+    @include tablet
+      width: 100%
+      left: 0
+
+    @include phone
+      width: 250px
+
   &__greeting
     position: absolute
     left: 260px
     top: 3rem
 
     @include tablet
+      top: 2rem
       left: 50%
       transform: translate(-50%)
 
     span
       @extend h1
       color: $white
+      display: inline-block
 
       &:first-of-type
         margin-left: 1rem
+
+        @include tablet
+          margin-left: 0
 
       &:nth-of-type(2)
         color: $orange
@@ -37,6 +49,9 @@
       &:last-of-type
         margin-left: 1rem
 
+        @include tablet
+          margin-left: 0
+
   &__sub-title
     position: absolute
     color: $white
@@ -45,3 +60,4 @@
     top: 50%
     transform: translate(-50%)
     max-width: 725px
+    width: 90%

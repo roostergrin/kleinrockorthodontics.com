@@ -9,6 +9,11 @@ export default {
       type: Object
     }
   },
+  computed: {
+    animationState () {
+      return this.$store.state.animationState['treatments-phase']
+    }
+  },
   components: {
     BlockTitle
   }

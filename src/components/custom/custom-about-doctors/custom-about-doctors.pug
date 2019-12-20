@@ -3,13 +3,13 @@
     .custom-about-doctors__doctor-container
       .custom-about-doctors__doctor-col
         .custom-about-doctors__announcement-bar.custom-about-doctors__announcement-bar--blue
-          BlockTitle.custom-about-doctors__announcement-title.custom-about-doctors__announcement-title--orange(:title="mission.title")
-          .custom-about-doctors__announcement-body(v-html="mission.text")
+          BlockTitle.custom-about-doctors__announcement-title.custom-about-doctors__announcement-title--orange(:title="mission.title", :class="{'custom-about-doctors__announcement-title--active': animationState}")
+          .custom-about-doctors__announcement-body(v-html="mission.text", :class="{'custom-about-doctors__announcement-body--active': animationState}")
         BlockTitle.custom-about-doctors__doctor-title(:title="doctors[0].name")
         BlockRows.custom-about-doctors__doctor-rows(:props="doctors[0]")
         .custom-about-doctors__announcement-bar.custom-about-doctors__announcement-bar--orange
-          BlockTitle.custom-about-doctors__announcement-title.custom-about-doctors__announcement-title--blue(title="Outside The Office")
-          .custom-about-doctors__announcement-body.custom-about-doctors__announcement-body--extended(v-html="doctors[0].outside_office")
+          BlockTitle.custom-about-doctors__announcement-title.custom-about-doctors__announcement-title--blue(title="Outside The Office", :class="{'custom-about-doctors__announcement-title--active': animationState}")
+          .custom-about-doctors__announcement-body.custom-about-doctors__announcement-body--extended(v-html="doctors[0].outside_office", :class="{'custom-about-doctors__announcement-body--active': animationState}")
           .custom-about-doctors__logos-row
             BaseIcon.custom-about-doctors__mets(name="About-DrK-Metslogo")
             BaseIcon.custom-about-doctors__jets(name="About-DrK-NYJetsLogo")
@@ -19,6 +19,6 @@
         BlockTitle.custom-about-doctors__doctor-title--blue(:title="doctors[1].name")
         BlockRows.custom-about-doctors__doctor-rows--black(:props="doctors[1]")
         .custom-about-doctors__announcement-bar.custom-about-doctors__announcement-bar--gray
-          BlockTitle.custom-about-doctors__announcement-title.custom-about-doctors__announcement-title--orange(title="Outside The Office")
-          .custom-about-doctors__announcement-body(v-html="doctors[1].outside_office")
+          BlockTitle.custom-about-doctors__announcement-title.custom-about-doctors__announcement-title--orange(title="Outside The Office", :class="{'custom-about-doctors__announcement-title--active': animationState}")
+          .custom-about-doctors__announcement-body(v-html="doctors[1].outside_office", :class="{'custom-about-doctors__announcement-body--active': animationState}")
           .custom-about-doctors__logos-row

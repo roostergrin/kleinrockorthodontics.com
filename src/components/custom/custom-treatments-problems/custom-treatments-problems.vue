@@ -9,7 +9,14 @@ export default {
       type: Object
     }
   },
+  created () {
+    this.counter = setInterval(() => {
+      this.updateIndex('increment')
+    }, this.timeout)
+  },
   data: () => ({
+    counter: null,
+    timeout: 6000,
     activeIndex: 0
   }),
   computed: {
@@ -18,8 +25,26 @@ export default {
     }
   },
   methods: {
-    updateIndex (index) {
+    jumpToIndex (index) {
+      this.timeout = 6000
       this.activeIndex = index
+    },
+    updateIndex (str) {
+      const increment = () => {
+        if (this.activeIndex === this.props.problems.length - 1) {
+          this.activeIndex = 0
+        } else {
+          this.activeIndex++
+        }
+      }
+      const decrement = () => {
+        if (this.activeIndex === 0) {
+          this.activeIndex = this.props.problems.length - 1
+        } else {
+          this.activeIndex--
+        }
+      }
+      str === 'increment' ? increment() : decrement()
     }
   },
   components: {
