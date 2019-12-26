@@ -26,7 +26,10 @@ export default {
   },
   methods: {
     jumpToIndex (index) {
-      this.timeout = 6000
+      clearInterval(this.counter)
+      this.counter = setInterval(() => {
+        this.updateIndex('increment')
+      }, this.timeout)
       this.activeIndex = index
     },
     updateIndex (str) {

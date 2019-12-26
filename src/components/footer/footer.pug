@@ -12,3 +12,5 @@ footer.footer(v-if="props")
         a(v-for="(social, i) in props.socials", :href="social.link")
           BaseIcon.footer__social(:name="social.icon")
       .footer__copyright(v-html="props.copyright")
+
+
