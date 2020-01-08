@@ -9,6 +9,11 @@ export default {
       type: Object
     }
   },
+  computed: {
+    patientList () {
+      return this.props.patients
+    }
+  },
   components: {
     BlockTitle
   }

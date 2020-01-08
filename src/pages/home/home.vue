@@ -6,7 +6,7 @@ import HomeWelcome from '@/components/custom/custom-home-welcome/custom-home-wel
 import HomeWhy from '@/components/custom/custom-home-why/custom-home-why'
 import HomeInvisalign from '@/components/custom/custom-home-invisalign/custom-home-invisalign'
 import HomeDoctors from '@/components/custom/custom-home-doctors/custom-home-doctors'
-import HomeTestimonials from '@/components/custom/custom-home-testimonials/custom-home-testimonials'
+import HomeTestimonials from '@/components/custom/custom-why-reviews/custom-why-reviews'
 
 export default {
   computed: {

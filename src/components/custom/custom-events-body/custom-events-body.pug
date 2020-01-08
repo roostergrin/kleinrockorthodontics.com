@@ -1,2 +1,9 @@
 .custom-events-body
   BlockTitle.custom-events-body__title(:title="props.title")
+  .custom-events-body__container
+    BlockTitle.custom-events-body__section-title(:title="patientList.title")
+    .custom-events-body__col
+      .custom-events-body__patient(v-for="(patient, i) in patientList.patients", :style="{'background' : 'url(' + patient.img + ') no-repeat center / contain'}")
+
+
+

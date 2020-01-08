@@ -9,3 +9,23 @@
     background-color: $darkBlue
     text-align: center
     padding: 2rem 0
+
+  &__section-title
+    text-align: center
+    width: 100%
+
+  &__container
+    @extend .container
+
+  &__col
+    @extend .col-12
+
+  &__patient
+    width: 500px
+    height: 300px
+    margin: auto
+
+    @include phone-lg
+      height: 175px
+      width: 100%
+      margin: 1rem 0

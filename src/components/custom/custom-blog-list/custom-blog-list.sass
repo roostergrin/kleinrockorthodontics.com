@@ -1,6 +1,10 @@
 .custom-blog-list
   padding-top: 120px
 
+  a
+    color: blue
+    text-decoration: underline
+
   @include tablet
     padding-top: 58px
 
@@ -29,10 +33,11 @@
 
       .custom-blog-list__text
         color: $darkGray
-        // max-height: 135px
+        max-height: 175px
         white-space: nowrap
         overflow: hidden
         text-overflow: ellipsis
+
 
       .custom-blog-list__button
         @extend .button
@@ -87,7 +92,7 @@
     height: 450px
 
   &__text
-    padding: 1rem 0
+    margin: 1rem 0
 
   &__container
     @extend .container
