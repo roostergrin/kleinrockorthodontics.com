@@ -2,10 +2,12 @@ footer.footer(v-if="props")
   .footer__container
     .footer__col
       .footer__location-title(v-html="props.locations[0].title")
-      .footer__location-info(v-html="props.locations[0].address")
+      a.footer__location-info(v-html="props.locations[0].address", :href="props.locations[0].address_link")
+      a.footer__location-phone(v-html="props.locations[0].phone", :href="'tel:' + props.locations[0].phone")
     .footer__col
       .footer__location-title(v-html="props.locations[1].title")
-      .footer__location-info(v-html="props.locations[1].address")
+      a.footer__location-info(v-html="props.locations[1].address", :href="props.locations[1].address_link")
+      a.footer__location-phone(v-html="props.locations[1].phone", :href="'tel:' + props.locations[1].phone")
     .footer__col
       .footer__button(@click="redirectToContactForm") Contact Us
       .footer__social-row

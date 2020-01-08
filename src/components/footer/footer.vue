@@ -10,6 +10,9 @@ export default {
     }
   },
   methods: {
+    addressFunction (address) {
+      window.location = address
+    },
     redirectToContactForm () {
       const { path } = this.$route
 

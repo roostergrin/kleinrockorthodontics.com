@@ -1,7 +1,6 @@
 .nav-desktop(v-if="props", :class="{ 'nav-desktop--hide' : navState === 'hide', 'nav-desktop--top' : navState === 'top' }")
   .nav-desktop__top
     .nav-desktop__logo(:style="{'background' : 'url(' + logo + ') no-repeat center / contain'}", @click="redirectHome")
-    .nav-desktop__active-link {{ activeRoute }}
   .nav-desktop__bottom
   BaseIcon.nav-desktop__logo-small(name="LogoOnly-Orange" @click.native="redirectHome")
   .nav-desktop__container
