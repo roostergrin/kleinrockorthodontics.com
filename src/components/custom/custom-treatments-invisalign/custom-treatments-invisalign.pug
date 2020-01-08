@@ -11,3 +11,6 @@
                                                         @click="updateIndex(i)"
                                                         v-html="type.title")
         BlockRows(:props="activeSection")
+        .custom-treatments-invisalign__row
+          video.custom-treatments-invisalign__video(v-if="activeSection.video", :src="activeSection.video" controls)
+  //- pre {{ activeSection}}
