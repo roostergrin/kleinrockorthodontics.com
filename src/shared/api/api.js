@@ -1,3 +1,3 @@
-const api = () => 'http://kleinrockorthodontics.roostertest3.com/wp-json'
+const api = () => 'https://kleinrockorthodontics.com/wp-json'
 
 export default api()
