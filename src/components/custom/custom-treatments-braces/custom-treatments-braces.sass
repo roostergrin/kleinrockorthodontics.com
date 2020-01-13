@@ -6,7 +6,13 @@
     color: $darkBlue
 
   &__row
-    @extend .flex-row
+    @media screen and (min-width: 770px)
+      // @extend .flex-row
+      display: flex
+      
+    flex-direction: row
+
+
 
     @include tablet
       flex-direction: column
