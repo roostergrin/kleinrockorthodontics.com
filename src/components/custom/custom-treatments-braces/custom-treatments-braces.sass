@@ -17,12 +17,16 @@
 
     @include tablet
 
+      height: 300px
       &:first-of-type
         order: 1
         margin-bottom: 2rem
 
       &:last-of-type
         display: none
+
+    @media screen and (max-width: 375px)
+      height: 400px !important
 
   &__image
     height: 350px
@@ -33,7 +37,7 @@
       height: 300px
       width: 300px
 
-    @include phone
+    @media screen and (max-width: 375px)
       height: 300px
       width: 300px
 
