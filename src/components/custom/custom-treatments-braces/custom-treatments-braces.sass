@@ -6,7 +6,13 @@
     color: $darkBlue
 
   &__row
-    @extend .flex-row
+    @media screen and (min-width: 770px)
+      // @extend .flex-row
+      display: flex
+      
+    flex-direction: row
+
+
 
     @include tablet
       flex-direction: column
@@ -17,6 +23,7 @@
 
     @include tablet
 
+      height: 300px
       &:first-of-type
         order: 1
         margin-bottom: 2rem
@@ -24,12 +31,19 @@
       &:last-of-type
         display: none
 
+    @media screen and (max-width: 375px)
+      height: 400px !important
+
   &__image
     height: 350px
     width: 350px
     border-radius: 100%
 
     @include tablet
+      height: 300px
+      width: 300px
+
+    @media screen and (max-width: 375px)
       height: 300px
       width: 300px
 
