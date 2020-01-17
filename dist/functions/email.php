@@ -15,7 +15,7 @@ function rg_serve_route () {
 
   $data = json_decode(file_get_contents("php://input"), true);
   $from = 'no-reply@wordpress.com';
-  $to = 'matt.sprague@roostergrin.com';
+  $to = 'info@kleinrockorthodontics.com';
   $subject = 'Rooster Grin Contact Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
@@ -59,7 +59,7 @@ function rg_serve_route () {
   $message .= '</div>';
   $message .= '</div>';
 
-  $message .= '<div class="container" style="padding: 0 32px 4rem 32px; max-width: 1440px; margin: 0 auto"><p style="color: #3f3f3f;">This form was generated from <a href="#" target="blank" style="text-decoration: none">ClientWebsite.com</a></p></div>';
+  $message .= '<div class="container" style="padding: 0 32px 4rem 32px; max-width: 1440px; margin: 0 auto"><p style="color: #3f3f3f;">This form was generated from <a href="https://kleinrockorthdontics.com" target="blank" style="text-decoration: none">kleinrockorthdontics.com</a></p></div>';
   $message .= '</div>';
   $message .= '</body></html>';
 
