@@ -16,7 +16,7 @@ const BlogTemplate = () => import('@/pages/blog-template/blog-template')
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/',
