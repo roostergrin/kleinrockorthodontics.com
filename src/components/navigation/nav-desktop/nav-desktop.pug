@@ -12,3 +12,6 @@
     .nav-desktop__row
       router-link.nav-desktop__link(v-for="(link, i) in links", :key="i", :to="link.path")
         p {{ link.name }}
+  a.nav-desktop__covid-banner(:href='props.nav_info.banner_link')
+    .nav-desktop__covid-text(v-html='props.nav_info.banner_text')
+      
