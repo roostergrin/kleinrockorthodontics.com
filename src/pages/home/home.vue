@@ -7,6 +7,7 @@ import HomeWhy from '@/components/custom/custom-home-why/custom-home-why'
 import HomeInvisalign from '@/components/custom/custom-home-invisalign/custom-home-invisalign'
 import HomeDoctors from '@/components/custom/custom-home-doctors/custom-home-doctors'
 import HomeTestimonials from '@/components/custom/custom-why-reviews/custom-why-reviews'
+import CovidMobileBanner from '@/components/custom/custom-mobile-covid-banner/custom-mobile-covid-banner'
 
 export default {
   computed: {
@@ -15,6 +16,7 @@ export default {
     }
   },
   components: {
+    CovidMobileBanner,
     HeroVideo,
     HomeWelcome,
     HomeWhy,

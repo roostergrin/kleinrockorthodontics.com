@@ -1,0 +1,42 @@
+.custom-mobile-covid-banner
+  @media screen and (min-width: 1024px)
+    display: none
+  height: 25rem
+  background-color: red
+  margin-top: 58px
+
+  &__row
+    display: flex
+    height: 100%
+    width: 100%
+
+    @include tablet
+      flex-direction: column-reverse
+
+  &__col
+    width: 50%
+    height: 100%
+    color: $white
+
+    @include tablet
+      width: 100%
+
+    &:first-of-type
+      // @extend .flex-column-center
+      // background-color: $white
+      padding: 1.5rem 3rem
+
+    h1
+      font-weight: 600
+      line-height: 40px
+    p
+      // position: absolute
+      margin: 10px 0
+
+    a
+      font-weight: bold
+      background-color: $white
+      padding: 5px
+      color: red
+      border-radius: 8px
+      position: absolute
