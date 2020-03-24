@@ -10,6 +10,6 @@
           a.nav-mobile__link(:href="link.path" v-if='!link.isNuxtLink' target='_blank') {{ link.name }}
       .nav-mobile__info-container
         .nav-mobile__button.nav-mobile__button--complimentary(@click="redirectToContactForm") complimentary consultation
-        a.nav-desktop__button(v-html='props.virtual_consultation_button.label' :href='props.virtual_consultation_button.href' target='_blank')
+        a.nav-desktop__button(v-html='props.virtual_consultation_button.label', :href='props.virtual_consultation_button.href' target='_blank')
   //- a.nav-mobile__covid-banner(:href='props.nav_info.banner_link')
   //-   .nav-mobile__covid-text(v-html='props.nav_info.banner_text')
