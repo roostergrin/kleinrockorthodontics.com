@@ -9,11 +9,9 @@
         BaseIcon.nav-desktop__phone(name="phone")
         .nav-desktop__phone-number {{ phone }}
       .nav-desktop__button(@click="redirectToContactForm") Free Consultation
-      a.nav-desktop__button(v-html='props.virtual_consultation_button.label' :href='props.virtual_consultation_button.href' target='_blank')
+      a.nav-desktop__button(v-html='props.virtual_consultation_button.label', :href='props.virtual_consultation_button.href' target='_blank')
     .nav-desktop__row
-      router-link.nav-desktop__link(v-for="(link, i) in links", :key="i", :to="link.path" v-if='link.isNuxtLink')
-        p {{ link.name }}
-      a.nav-desktop__link(v-for="(link, i) in links", :key="i", :href="link.path" v-if='!link.isNuxtLink' target='_blank')
+      router-link.nav-desktop__link(v-for="(link, i) in links", :key="i", :to="link.path")
         p {{ link.name }}
   a.nav-desktop__covid-banner(:href='props.nav_info.banner_link')
     .nav-desktop__covid-text(v-html='props.nav_info.banner_text')

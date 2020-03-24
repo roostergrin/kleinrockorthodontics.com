@@ -22,50 +22,43 @@ const router = new VueRouter({
       path: '/',
       name: 'Home',
       navigation: false,
-      component: Home,
-      isNuxtLink: true
+      component: Home
     },
     {
       path: '/about',
       name: 'About',
       navigation: true,
-      component: About,
-      isNuxtLink: true
+      component: About
     },
     {
       path: '/why-us',
       name: 'Why Us',
       navigation: true,
-      component: WhyUs,
-      isNuxtLink: true
+      component: WhyUs
     },
     {
       path: '/treatments',
       name: 'Treatments',
       navigation: true,
-      component: Treatments,
-      isNuxtLink: true
+      component: Treatments
     },
     {
       path: '/new-patients',
       name: 'New Patients',
       navigation: true,
-      component: NewPatients,
-      isNuxtLink: true
+      component: NewPatients
     },
     {
       path: '/contact-us',
       name: 'Contact Us',
       navigation: true,
-      component: ContactUs,
-      isNuxtLink: true
+      component: ContactUs
     },
     {
       path: '/blog',
       name: 'Blog',
       navigation: true,
-      component: Blog,
-      isNuxtLink: true
+      component: Blog
     },
     {
       path: '/blog/:blogID',
@@ -75,14 +68,7 @@ const router = new VueRouter({
       path: '/fun-and-events',
       name: 'Fun and Events',
       navigation: true,
-      component: FunAndEvents,
-      isNuxtLink: true
-    },
-    {
-      path: 'https://formsroostergrin.com/kleinrockorthodontics/virtual-page-v2/index.html',
-      name: 'Virtual Assessment',
-      isNuxtLink: false,
-      navigation: true
+      component: FunAndEvents
     },
     {
       path: '/*',
