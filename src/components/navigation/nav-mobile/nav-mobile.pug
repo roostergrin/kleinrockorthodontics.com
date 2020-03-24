@@ -6,7 +6,8 @@
     .nav-mobile__menu-wrapper
       .nav-mobile__links-container
         span(v-for='(link, i) in links', :key="i")
-          router-link.nav-mobile__link(:to="link") {{ link.name }}
+          router-link.nav-mobile__link(:to="link" v-if='link.isNuxtLink') {{ link.name }}
+          a.nav-mobile__link(:href="link.path" v-if='!link.isNuxtLink' target='_blank') {{ link.name }}
       .nav-mobile__info-container
         .nav-mobile__button.nav-mobile__button--complimentary(@click="redirectToContactForm") complimentary consultation
   //- a.nav-mobile__covid-banner(:href='props.nav_info.banner_link')
