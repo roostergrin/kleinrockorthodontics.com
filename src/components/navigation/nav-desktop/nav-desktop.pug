@@ -9,6 +9,7 @@
         BaseIcon.nav-desktop__phone(name="phone")
         .nav-desktop__phone-number {{ phone }}
       .nav-desktop__button(@click="redirectToContactForm") Free Consultation
+      a.nav-desktop__button(v-html='props.virtual_consultation_button.label' :href='props.virtual_consultation_button.href' target='_blank')
     .nav-desktop__row
       router-link.nav-desktop__link(v-for="(link, i) in links", :key="i", :to="link.path" v-if='link.isNuxtLink')
         p {{ link.name }}
