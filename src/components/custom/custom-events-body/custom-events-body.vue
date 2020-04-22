@@ -16,7 +16,7 @@ export default {
   },
   mounted: () => {
     let viralsweep = document.createElement('script')
-    viralsweep.setAttribute('src', 'https://app.viralsweep.com/vsa-widget-1f7921-64321.js?sid=64321_558167')
+    viralsweep.setAttribute('src', 'https://app.viralsweep.com/vsa-widget-43b040-66846.js?sid=66846_484162')
     document.head.appendChild(viralsweep)
   },
   components: {
