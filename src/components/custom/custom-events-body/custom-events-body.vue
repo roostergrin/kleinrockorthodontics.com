@@ -14,10 +14,9 @@ export default {
       return this.props.patients
     }
   },
-
   mounted: () => {
     let viralsweep = document.createElement('script')
-    viralsweep.setAttribute('src', 'https://app.viralsweep.com/vsa-widget-9a87a9-75091.js?sid=75091_206124')
+    viralsweep.setAttribute('src', 'https://app.viralsweep.com/vsa-widget-d861a3-81244.js?sid=81244_251491')
     document.head.appendChild(viralsweep)
   },
   components: {
